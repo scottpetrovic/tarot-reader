@@ -1,0 +1,51 @@
+* {
+    font-family: math;
+}
+
+button {
+    background: rgb(223 235 255);
+    color: grey;;
+    padding: 0.75rem;
+    border: none;
+    box-shadow: 3px 3px 3px grey;
+    margin: 0.5rem;
+    border-radius: 3px;
+    cursor: pointer;
+}
+button:hover {
+    background: rgb(210, 221, 240);
+    color: grey;
+}
+
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    border-radius: 5px; /* Rounded corners */
+    width: 70px; /* Fixed width */
+    height: 120px; /* Fixed height */
+    box-shadow: 5px 3px 1px rgb(0 0 0 / 41%);
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center children vertically */
+    margin: 0.4rem;
+    display: inline-flex;
+    cursor: pointer;
+    background-image: url('./images/card-back-small.jpg');
+    background-size: cover;
+    transition-property: all;
+    transition-duration: 0.2s;
+    margin: 1rem -1.5rem;
+    z-index: 0; /* Explicitly set z-index to avoid z-index shifts with hover event */
+}
+.card:hover {
+    transform: translate(-5px, 20px);
+}
+
+#currently-selected-card-image {
+    width: 180px;
+    height: 300px;
+    margin: 2rem;
+    display: inline-flex;
+}
