@@ -172,21 +172,26 @@ export class TarotReading
 
         // get last card ID
         let last_card_id = this.selected_cards[this.selected_cards.length - 1];
-        let card_reverse_status_text = this.get_card_by_id(last_card_id).reversal ? 'reversed' : 'upright'; // don't show anything if upright
+        let selected_card = this.get_card_by_id(last_card_id)
+        let card_reverse_status_text = selected_card.reversal ? 'reversed' : 'upright'; // don't show anything if upright
 
 
         // update image of card selected on the DOM
-        const image_path = './images/card-back.jpg'; // to later replace with data from card
         const selected_card_dom_image =  document.getElementById('currently-selected-card-image')
-        selected_card_dom_image.src = image_path;
-        selected_card_dom_image.alt = this.get_card_by_id(last_card_id).name
+        selected_card_dom_image.src = `./images/${selected_card.arcanaType}/${selected_card.imageName}`;
+        selected_card_dom_image.alt = selected_card.name
+
 
 
         // show card information on DOM with ID currently-selected-card
-        document.getElementById('currently-selected-card').innerText = `${this.get_card_by_id(last_card_id).name}`;
+        document.getElementById('currently-selected-card').innerText = `${selected_card.name}`;
         if(card_reverse_status_text === 'reversed') {
             document.getElementById('currently-selected-card').innerText += ` (Reversed)`;
             selected_card_dom_image.alt += ' (Reversed)'
+            selected_card_dom_image.classList.add('reversed')
+        }
+        else {
+            selected_card_dom_image.classList.remove('reversed')
         }
     
     

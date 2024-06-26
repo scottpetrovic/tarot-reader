@@ -49,3 +49,9 @@ button:hover {
     margin: 2rem;
     display: inline-flex;
 }
+
+.reversed {
+    transform: rotate(180deg);
+    transition-duration: 2.0s;
+    transition-property: transform;
+}

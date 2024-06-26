@@ -5,7 +5,7 @@ const tarot_data = [
         "arcanaType": "Major",
         "astrologicalCorrespondence": "Uranus",
         "reversal": false,
-        "imageURL": "images/fool.jpg"
+        "imageName": "00_Fool.jpg"
       },
       {
         "name": "The Magician",
@@ -13,7 +13,7 @@ const tarot_data = [
         "arcanaType": "Major",
         "astrologicalCorrespondence": "Mercury",
         "reversal": false,
-        "imageURL": "images/magician.jpg"
+        "imageName": "01_Magician.jpg"
       },
       {
         "name": "The High Priestess",
@@ -21,7 +21,7 @@ const tarot_data = [
         "arcanaType": "Major",
         "astrologicalCorrespondence": "Moon",
         "reversal": false,
-        "imageURL": "images/high_priestess.jpg"
+        "imageName": "02_High_Priestess.jpg"
       },
         {
             "name": "The Empress",
@@ -29,7 +29,7 @@ const tarot_data = [
             "arcanaType": "Major",
             "astrologicalCorrespondence": "Venus",
             "reversal": false,
-            "imageURL": "images/empress.jpg"
+            "imageName": "03_Empress.jpg"
         },
         {
             "name": "The Emperor",
@@ -37,7 +37,7 @@ const tarot_data = [
             "arcanaType": "Major",
             "astrologicalCorrespondence": "Aries",
             "reversal": false,
-            "imageURL": "images/emperor.jpg"
+            "imageName": "04_Emperor.jpg"
         },
         {
             "name": "The Hierophant",
@@ -45,7 +45,7 @@ const tarot_data = [
             "arcanaType": "Major",
             "astrologicalCorrespondence": "Taurus",
             "reversal": false,
-            "imageURL": "images/hierophant.jpg"
+            "imageName": "05_Hierophant.jpg"
         },
         {
             "name": "The Lovers",
@@ -53,7 +53,7 @@ const tarot_data = [
             "arcanaType": "Major",
             "astrologicalCorrespondence": "Gemini",
             "reversal": false,
-            "imageURL": "images/lovers.jpg"
+            "imageName": "06_Lovers.jpg"
         },
         {
             "name": "The Chariot",
@@ -61,7 +61,7 @@ const tarot_data = [
             "arcanaType": "Major",
             "astrologicalCorrespondence": "Cancer",
             "reversal": false,
-            "imageURL": "images/chariot.jpg"
+            "imageName": "07_Chariot.jpg"
         },
         {
             "name": "Strength",
@@ -69,7 +69,7 @@ const tarot_data = [
             "arcanaType": "Major",
             "astrologicalCorrespondence": "Leo",
             "reversal": false,
-            "imageURL": "images/strength.jpg"
+            "imageName": "08_Strength.jpg"
         },
         {
             "name": "The Hermit",
@@ -77,7 +77,7 @@ const tarot_data = [
             "arcanaType": "Major",
             "astrologicalCorrespondence": "Virgo",
             "reversal": false,
-            "imageURL": "images/hermit.jpg"
+            "imageName": "09_Hermit.jpg"
         },
         {
             "name": "Wheel of Fortune",
@@ -85,7 +85,7 @@ const tarot_data = [
             "arcanaType": "Major",
             "astrologicalCorrespondence": "Jupiter",
             "reversal": false,
-            "imageURL": "images/wheel_of_fortune.jpg"
+            "imageName": "10_Wheel_of_Fortune.jpg"
         },
         {
             "name": "Justice",
@@ -93,7 +93,7 @@ const tarot_data = [
             "arcanaType": "Major",
             "astrologicalCorrespondence": "Libra",
             "reversal": false,
-            "imageURL": "images/justice.jpg"
+            "imageName": "11_Justice.jpg"
         },
         {
             "name": "The Hanged Man",
@@ -101,7 +101,7 @@ const tarot_data = [
             "arcanaType": "Major",
             "astrologicalCorrespondence": "Neptune",
             "reversal": false,
-            "imageURL": "images/hangedman.jpg"
+            "imageName": "12_Hanged_Man.jpg"
         },
         {
             "name": "Death",
@@ -109,7 +109,7 @@ const tarot_data = [
             "arcanaType": "Major",
             "astrologicalCorrespondence": "Scorpio",
             "reversal": false,
-            "imageURL": "images/death.jpg"
+            "imageName": "13_Death.jpg"
         },
         {
             "name": "Temperance",
@@ -117,7 +117,7 @@ const tarot_data = [
             "arcanaType": "Major",
             "astrologicalCorrespondence": "Sagittarius",
             "reversal": false,
-            "imageURL": "images/temperance.jpg"
+            "imageName": "14_Temperance.jpg"
         },
         {
             "name": "The Devil",
@@ -125,7 +125,7 @@ const tarot_data = [
             "arcanaType": "Major",
             "astrologicalCorrespondence": "Capricorn",
             "reversal": false,
-            "imageURL": "images/devil.jpg"
+            "imageName": "15_Devil.jpg"
         },
         {
             "name": "The Tower",
@@ -133,7 +133,7 @@ const tarot_data = [
             "arcanaType": "Major",
             "astrologicalCorrespondence": "Mars",
             "reversal": false,
-            "imageURL": "images/tower.jpg"
+            "imageName": "16_Tower.jpg"
         },
         {
             "name": "The Star",
@@ -141,7 +141,7 @@ const tarot_data = [
             "arcanaType": "Major",
             "astrologicalCorrespondence": "Aquarius",
             "reversal": false,
-            "imageURL": "images/star.jpg"
+            "imageName": "17_Star.jpg"
         },
         {
             "name": "The Moon",
@@ -149,7 +149,7 @@ const tarot_data = [
             "arcanaType": "Major",
             "astrologicalCorrespondence": "Pisces",
             "reversal": false,
-            "imageURL": "images/moon.jpg"
+            "imageName": "18_Moon.jpg"
         },
         {
             "name": "The Sun",
@@ -157,7 +157,7 @@ const tarot_data = [
             "arcanaType": "Major",
             "astrologicalCorrespondence": "Sun",
             "reversal": false,
-            "imageURL": "images/sun.jpg"
+            "imageName": "19_Sun.jpg"
         },
         {
             "name": "Judgement",
@@ -165,7 +165,7 @@ const tarot_data = [
             "arcanaType": "Major",
             "astrologicalCorrespondence": "Pluto",
             "reversal": false,
-            "imageURL": "images/judgement.jpg"
+            "imageName": "20_Judgement.jpg"
         },
       {
         "name": "The World",
@@ -173,7 +173,7 @@ const tarot_data = [
         "arcanaType": "Major",
         "astrologicalCorrespondence": "Saturn",
         "reversal": false,
-        "imageURL": "images/world.jpg"
+        "imageName": "21_World.jpg"
       },
 
     {
@@ -183,7 +183,7 @@ const tarot_data = [
         "suit": "Wands",
         "astrologicalCorrespondence": "Aries",
         "reversal": false,
-        "imageURL": "images/ace_of_wands.jpg"
+        "imageName": "wands01.jpg"
     },
     {
         "name": "Two of Wands",
@@ -192,7 +192,7 @@ const tarot_data = [
         "suit": "Wands",
         "astrologicalCorrespondence": "Aries",
         "reversal": false,
-        "imageURL": "images/two_of_wands.jpg"
+        "imageName": "wands02.jpg"
       },
       {
         "name": "Three of Wands",
@@ -201,7 +201,7 @@ const tarot_data = [
         "suit": "Wands",
         "astrologicalCorrespondence": "Aries",
         "reversal": false,
-        "imageURL": "images/three_of_wands.jpg"
+        "imageName": "wands03.jpg"
       },
       {
         "name": "Four of Wands",
@@ -210,7 +210,7 @@ const tarot_data = [
         "suit": "Wands",
         "astrologicalCorrespondence": "Aries",
         "reversal": false,
-        "imageURL": "images/four_of_wands.jpg"
+        "imageName": "wands04.jpg"
       },
       {
         "name": "Five of Wands",
@@ -219,7 +219,7 @@ const tarot_data = [
         "suit": "Wands",
         "astrologicalCorrespondence": "Leo",
         "reversal": false,
-        "imageURL": "images/five_of_wands.jpg"
+        "imageName": "wands05.jpg"
       },
       {
         "name": "Six of Wands",
@@ -228,7 +228,7 @@ const tarot_data = [
         "suit": "Wands",
         "astrologicalCorrespondence": "Leo",
         "reversal": false,
-        "imageURL": "images/six_of_wands.jpg"
+        "imageName": "wands06.jpg"
       },
       {
         "name": "Seven of Wands",
@@ -237,7 +237,7 @@ const tarot_data = [
         "suit": "Wands",
         "astrologicalCorrespondence": "Leo",
         "reversal": false,
-        "imageURL": "images/seven_of_wands.jpg"
+        "imageName": "wands07.jpg"
       },
       {
         "name": "Eight of Wands",
@@ -246,7 +246,7 @@ const tarot_data = [
         "suit": "Wands",
         "astrologicalCorrespondence": "Sagittarius",
         "reversal": false,
-        "imageURL": "images/eight_of_wands.jpg"
+        "imageName": "wands08.jpg"
       },
       {
         "name": "Nine of Wands",
@@ -255,7 +255,7 @@ const tarot_data = [
         "suit": "Wands",
         "astrologicalCorrespondence": "Sagittarius",
         "reversal": false,
-        "imageURL": "images/nine_of_wands.jpg"
+        "imageName": "wands09.jpg"
       },
       {
         "name": "Ten of Wands",
@@ -264,7 +264,7 @@ const tarot_data = [
         "suit": "Wands",
         "astrologicalCorrespondence": "Sagittarius",
         "reversal": false,
-        "imageURL": "images/ten_of_wands.jpg"
+        "imageName": "wands10.jpg"
        },
         {
          "name": "Page of Wands",
@@ -273,7 +273,7 @@ const tarot_data = [
          "suit": "Wands",
          "astrologicalCorrespondence": "Aries",
          "reversal": false,
-         "imageURL": "images/page_of_wands.jpg"
+         "imageName": "wands11.jpg"
         },
         {
          "name": "Knight of Wands",
@@ -282,7 +282,7 @@ const tarot_data = [
          "suit": "Wands",
          "astrologicalCorrespondence": "Aries",
          "reversal": false,
-         "imageURL": "images/knight_of_wands.jpg"
+         "imageName": "wands12.jpg"
         },
         {
          "name": "Queen of Wands",
@@ -291,7 +291,7 @@ const tarot_data = [
          "suit": "Wands",
          "astrologicalCorrespondence": "Aries",
          "reversal": false,
-         "imageURL": "images/queen_of_wands.jpg"
+         "imageName": "wands13.jpg"
         },
         {
          "name": "King of Wands",
@@ -300,7 +300,7 @@ const tarot_data = [
          "suit": "Wands",
          "astrologicalCorrespondence": "Aries",
          "reversal": false,
-         "imageURL": "images/king_of_wands.jpg"
+         "imageName": "wands14.jpg"
         },
 
     {
@@ -310,7 +310,7 @@ const tarot_data = [
         "suit": "Pentacles",
         "astrologicalCorrespondence": "Capricorn",
         "reversal": false,
-        "imageURL": "images/ace_of_pentacles.jpg"
+        "imageName": "Pents01.jpg"
     },
     {
         "name": "Two of Pentacles",
@@ -319,7 +319,7 @@ const tarot_data = [
         "suit": "Pentacles",
         "astrologicalCorrespondence": "Capricorn",
         "reversal": false,
-        "imageURL": "images/two_of_pentacles.jpg"
+        "imageName": "Pents02.jpg"
         },
         {
         "name": "Three of Pentacles",
@@ -328,7 +328,7 @@ const tarot_data = [
         "suit": "Pentacles",
         "astrologicalCorrespondence": "Capricorn",
         "reversal": false,
-        "imageURL": "images/three_of_pentacles.jpg"
+        "imageName": "Pents03.jpg"
         },
         {
         "name": "Four of Pentacles",
@@ -337,7 +337,7 @@ const tarot_data = [
         "suit": "Pentacles",
         "astrologicalCorrespondence": "Capricorn",
         "reversal": false,
-        "imageURL": "images/four_of_pentacles.jpg"
+        "imageName": "Pents04.jpg"
         },
         {
         "name": "Five of Pentacles",
@@ -346,7 +346,7 @@ const tarot_data = [
         "suit": "Pentacles",
         "astrologicalCorrespondence": "Taurus",
         "reversal": false,
-        "imageURL": "images/five_of_pentacles.jpg"
+        "imageName": "Pents05.jpg"
         },
         {
         "name": "Six of Pentacles",
@@ -355,7 +355,7 @@ const tarot_data = [
         "suit": "Pentacles",
         "astrologicalCorrespondence": "Taurus",
         "reversal": false,
-        "imageURL": "images/six_of_pentacles.jpg"
+        "imageName": "Pents06.jpg"
         },
         {
         "name": "Seven of Pentacles",
@@ -364,7 +364,7 @@ const tarot_data = [
         "suit": "Pentacles",
         "astrologicalCorrespondence": "Taurus",
         "reversal": false,
-        "imageURL": "images/seven_of_pentacles.jpg"
+        "imageName": "Pents07.jpg"
         },
         {
         "name": "Eight of Pentacles",
@@ -373,7 +373,7 @@ const tarot_data = [
         "suit": "Pentacles",
         "astrologicalCorrespondence": "Virgo",
         "reversal": false,
-        "imageURL": "images/eight_of_pentacles.jpg"
+        "imageName": "Pents08.jpg"
         },
         {
         "name": "Nine of Pentacles",
@@ -382,7 +382,7 @@ const tarot_data = [
         "suit": "Pentacles",
         "astrologicalCorrespondence": "Virgo",
         "reversal": false,
-        "imageURL": "images/nine_of_pentacles.jpg"
+        "imageName": "Pents09.jpg"
         },
         {
         "name": "Ten of Pentacles",
@@ -391,7 +391,7 @@ const tarot_data = [
         "suit": "Pentacles",
         "astrologicalCorrespondence": "Virgo",
         "reversal": false,
-        "imageURL": "images/ten_of_pentacles.jpg"
+        "imageName": "Pents10.jpg"
         },
         {
         "name": "Page of Pentacles",
@@ -400,7 +400,7 @@ const tarot_data = [
         "suit": "Pentacles",
         "astrologicalCorrespondence": "Taurus",
         "reversal": false,
-        "imageURL": "images/page_of_pentacles.jpg"
+        "imageName": "Pents11.jpg"
         },
         {
         "name": "Knight of Pentacles",
@@ -409,7 +409,7 @@ const tarot_data = [
         "suit": "Pentacles",
         "astrologicalCorrespondence": "Taurus",
         "reversal": false,
-        "imageURL": "images/knight_of_pentacles.jpg"
+        "imageName": "Pents12.jpg"
         },
         {
         "name": "Queen of Pentacles",
@@ -418,7 +418,7 @@ const tarot_data = [
         "suit": "Pentacles",
         "astrologicalCorrespondence": "Taurus",
         "reversal": false,
-        "imageURL": "images/queen_of_pentacles.jpg"
+        "imageName": "Pents13.jpg"
         },
         {   
         "name": "King of Pentacles",
@@ -427,7 +427,7 @@ const tarot_data = [
         "suit": "Pentacles",
         "astrologicalCorrespondence": "Taurus",
         "reversal": false,
-        "imageURL": "images/king_of_pentacles.jpg"
+        "imageName": "Pents14.jpg"
         },
 
     {
@@ -437,7 +437,7 @@ const tarot_data = [
         "suit": "Cups",
         "astrologicalCorrespondence": "Cancer",
         "reversal": false,
-        "imageURL": "images/ace_of_cups.jpg"
+        "imageName": "Cups01.jpg"
         },
     {
         "name": "Two of Cups",
@@ -446,7 +446,7 @@ const tarot_data = [
         "suit": "Cups",
         "astrologicalCorrespondence": "Cancer",
         "reversal": false,
-        "imageURL": "images/two_of_cups.jpg"
+        "imageName": "Cups02.jpg"
         },
         {
         "name": "Three of Cups",
@@ -455,7 +455,7 @@ const tarot_data = [
         "suit": "Cups",
         "astrologicalCorrespondence": "Cancer",
         "reversal": false,
-        "imageURL": "images/three_of_cups.jpg"
+        "imageName": "Cups03.jpg"
         },
         {
         "name": "Four of Cups",
@@ -464,7 +464,7 @@ const tarot_data = [
         "suit": "Cups",
         "astrologicalCorrespondence": "Cancer",
         "reversal": false,
-        "imageURL": "images/four_of_cups.jpg"
+        "imageName": "Cups04.jpg"
         },
         {
         "name": "Five of Cups",
@@ -473,7 +473,7 @@ const tarot_data = [
         "suit": "Cups",
         "astrologicalCorrespondence": "Scorpio",
         "reversal": false,
-        "imageURL": "images/five_of_cups.jpg"
+        "imageName": "Cups05.jpg"
         },
         {
         "name": "Six of Cups",
@@ -482,7 +482,7 @@ const tarot_data = [
         "suit": "Cups",
         "astrologicalCorrespondence": "Scorpio",
         "reversal": false,
-        "imageURL": "images/six_of_cups.jpg"
+        "imageName": "Cups06.jpg"
         },
         {
         "name": "Seven of Cups",
@@ -491,7 +491,7 @@ const tarot_data = [
         "suit": "Cups",
         "astrologicalCorrespondence": "Scorpio",
         "reversal": false,
-        "imageURL": "images/seven_of_cups.jpg"
+        "imageName": "Cups07.jpg"
         },
         {
         "name": "Eight of Cups",
@@ -500,7 +500,7 @@ const tarot_data = [
         "suit": "Cups",
         "astrologicalCorrespondence": "Pisces",
         "reversal": false,
-        "imageURL": "images/eight_of_cups.jpg"
+        "imageName": "Cups08.jpg"
         },
         {
         "name": "Nine of Cups",
@@ -509,7 +509,7 @@ const tarot_data = [
         "suit": "Cups",
         "astrologicalCorrespondence": "Pisces",
         "reversal": false,
-        "imageURL": "images/nine_of_cups.jpg"
+        "imageName": "Cups09.jpg"
         },
         {
         "name": "Ten of Cups",
@@ -518,7 +518,7 @@ const tarot_data = [
         "suit": "Cups",
         "astrologicalCorrespondence": "Pisces",
         "reversal": false,
-        "imageURL": "images/ten_of_cups.jpg"
+        "imageName": "Cups10.jpg"
         },
         {
         "name": "Page of Cups",
@@ -527,7 +527,7 @@ const tarot_data = [
         "suit": "Cups",
         "astrologicalCorrespondence": "Cancer",
         "reversal": false,
-        "imageURL": "images/page_of_cups.jpg"
+        "imageName": "Cups11.jpg"
         },
         {
         "name": "Knight of Cups",
@@ -536,7 +536,7 @@ const tarot_data = [
         "suit": "Cups",
         "astrologicalCorrespondence": "Cancer",
         "reversal": false,
-        "imageURL": "images/knight_of_cups.jpg"
+        "imageName": "Cups12.jpg"
         },
         {
         "name": "Queen of Cups",
@@ -545,7 +545,7 @@ const tarot_data = [
         "suit": "Cups",
         "astrologicalCorrespondence": "Cancer",
         "reversal": false,
-        "imageURL": "images/queen_of_cups.jpg"
+        "imageName": "Cups13.jpg"
         },
         {
         "name": "King of Cups",
@@ -554,7 +554,7 @@ const tarot_data = [
         "suit": "Cups",
         "astrologicalCorrespondence": "Cancer",
         "reversal": false,
-        "imageURL": "images/king_of_cups.jpg"
+        "imageName": "Cups14.jpg"
         },
 
     {
@@ -564,7 +564,7 @@ const tarot_data = [
         "suit": "Swords",
         "astrologicalCorrespondence": "Gemini",
         "reversal": false,
-        "imageURL": "images/ace_of_swords.jpg"
+        "imageName": "Swords01.jpg"
     },
     {
         "name": "Two of Swords",
@@ -573,7 +573,7 @@ const tarot_data = [
         "suit": "Swords",
         "astrologicalCorrespondence": "Gemini",
         "reversal": false,
-        "imageURL": "images/two_of_swords.jpg"
+        "imageName": "Swords02.jpg"
     },
     {
         "name": "Three of Swords",
@@ -582,7 +582,7 @@ const tarot_data = [
         "suit": "Swords",
         "astrologicalCorrespondence": "Gemini",
         "reversal": false,
-        "imageURL": "images/three_of_swords.jpg"
+        "imageName": "Swords03.jpg"
     },
     {
         "name": "Four of Swords",
@@ -591,7 +591,7 @@ const tarot_data = [
         "suit": "Swords",
         "astrologicalCorrespondence": "Libra",
         "reversal": false,
-        "imageURL": "images/four_of_swords.jpg"
+        "imageName": "Swords04.jpg"
     },
     {
         "name": "Five of Swords",
@@ -600,7 +600,7 @@ const tarot_data = [
         "suit": "Swords",
         "astrologicalCorrespondence": "Aquarius",
         "reversal": false,
-        "imageURL": "images/five_of_swords.jpg"
+        "imageName": "Swords05.jpg"
     },
     {
         "name": "Six of Swords",
@@ -609,7 +609,7 @@ const tarot_data = [
         "suit": "Swords",
         "astrologicalCorrespondence": "Aquarius",
         "reversal": false,
-        "imageURL": "images/six_of_swords.jpg"
+        "imageName": "Swords06.jpg"
     },
     {
         "name": "Seven of Swords",
@@ -618,7 +618,7 @@ const tarot_data = [
         "suit": "Swords",
         "astrologicalCorrespondence": "Aquarius",
         "reversal": false,
-        "imageURL": "images/seven_of_swords.jpg"
+        "imageName": "Swords07.jpg"
     },
     {
         "name": "Eight of Swords",
@@ -627,7 +627,7 @@ const tarot_data = [
         "suit": "Swords",
         "astrologicalCorrespondence": "Jupiter",
         "reversal": false,
-        "imageURL": "images/eight_of_swords.jpg"
+        "imageName": "Swords08.jpg"
     },
     {
         "name": "Nine of Swords",
@@ -636,7 +636,7 @@ const tarot_data = [
         "suit": "Swords",
         "astrologicalCorrespondence": "Gemini",
         "reversal": false,
-        "imageURL": "images/nine_of_swords.jpg"
+        "imageName": "Swords09.jpg"
     },
     {
         "name": "Ten of Swords",
@@ -645,7 +645,7 @@ const tarot_data = [
         "suit": "Swords",
         "astrologicalCorrespondence": "Gemini",
         "reversal": false,
-        "imageURL": "images/ten_of_swords.jpg"
+        "imageName": "Swords10.jpg"
     },
     {
         "name": "Page of Swords",
@@ -654,7 +654,7 @@ const tarot_data = [
         "suit": "Swords",
         "astrologicalCorrespondence": "Gemini",
         "reversal": false,
-        "imageURL": "images/page_of_swords.jpg"
+        "imageName": "Swords11.jpg"
     },
     {
         "name": "Knight of Swords",
@@ -663,7 +663,7 @@ const tarot_data = [
         "suit": "Swords",
         "astrologicalCorrespondence": "Gemini",
         "reversal": false,
-        "imageURL": "images/knight_of_swords.jpg"
+        "imageName": "Swords12.jpg"
     },
     {
         "name": "Queen of Swords",
@@ -672,7 +672,7 @@ const tarot_data = [
         "suit": "Swords",
         "astrologicalCorrespondence": "Gemini",
         "reversal": false,
-        "imageURL": "images/queen_of_swords.jpg"
+        "imageName": "Swords13.jpg"
     },
     {
         "name": "King of Swords",
@@ -681,7 +681,7 @@ const tarot_data = [
         "suit": "Swords",
         "astrologicalCorrespondence": "Gemini",
         "reversal": false,
-        "imageURL": "images/king_of_swords.jpg"
+        "imageName": "Swords14.jpg"
     }
 ]
 
