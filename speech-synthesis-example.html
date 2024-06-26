@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Text to Speech Demo</title>
+</head>
+<body>
+	<h1>Text to Speech Demo</h1>
+	<select id="voice-select">
+		<option value="">Select a voice</option>
+	</select>
+	<button id="speak-button">Read out text</button>
+	<script>
+		const voiceSelect = document.getElementById('voice-select');
+		const speakButton = document.getElementById('speak-button');
+		const text = 'Welcome to our tarot reading! Your current situation is...'; // Replace with our tarot reading text
+		const utterance = new SpeechSynthesisUtterance(text);
+
+		// Wait for voices to be loaded
+		speechSynthesis.addEventListener('voiceschanged', () => {
+			const voices = speechSynthesis.getVoices();
+			voices.forEach((voice, index) => {
+				const option = document.createElement('option');
+				option.value = index;
+				option.textContent = `${voice.name} (${voice.lang})`;
+				voiceSelect.appendChild(option);
+			});
+		});
+
+	
+		speakButton.addEventListener('click', () => {
+			const selectedVoiceIndex = voiceSelect.value;
+			utterance.voice = speechSynthesis.getVoices()[selectedVoiceIndex];
+			utterance.rate = 0.9; // Set the speech rate (1.0 is normal)
+			speechSynthesis.speak(utterance);
+		});
+
+
+		utterance.addEventListener('boundary', (event) => {
+			
+			if (event.name === 'word') {
+				console.log(event)
+				console.log(`Reached boundary: ${event.name}`);
+			}
+		});
+
+		
+	</script>
+</body>
+</html>

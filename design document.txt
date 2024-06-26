@@ -1,0 +1,46 @@
+# Tarot Experience (sometimes called "cartomancy" )
+# Tarot for self-care and mindfulness. Use with meditation
+
+Have an interactive experience simulating a tarot reading experience.
+
+- Using LLM model in results (maybe use ollama web server API??)
+- give some training on the LLM being a tarot card reader to tell my fortune
+-- need to make sure it knows about the upside down cards vs. right side up
+-- give one result at a time and explain things
+- Need way for me to manually select 7? cards to tell the fortune
+-- maybe just have an array that stores all the items
+- LLM reading results in and explain the card
+- (DONE) possible to convert the text to audio (doing this with SpeechSynthesis API)
+
+
+
+
+where to get Tarot information and images?
+- possible to have fancy graphics or maybe 3d to enhance the experience.
+- 3d graphics. maybe take Waite public domain cards and run through midjourney for alternate graphics
+- images from wikipedia. https://en.wikipedia.org/wiki/Rider%E2%80%93Waite_Tarot
+
+
+how flow would work with experience
+-----------------------------------
+1. Ask the person if they want to learn about their future in relationships, or career?
+2. Allow person to pick a card. UI would pull the card out and flip it around
+3. Fortune teller would tell about the card in relation to what topic the person chose
+4. Repeat step 2-4 through each step of the furtune telling
+5. Give a summary at the end of the whole story
+6. Do some fancy outro with smoke and the fortune teller disappearing like some mystical being
+
+
+Card identifications with a fortune telling
+-----------------------------
+Card 1:  How you feel about yourself
+Card 2:  What you want most right now
+Card 3:   Your fears
+Card 4:   What is going for you
+Card 5:   What is going against you
+Card 6:  The likely outcome
+
+
+
+
+
