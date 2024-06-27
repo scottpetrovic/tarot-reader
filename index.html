@@ -11,23 +11,23 @@
 
 <body>
   <header>
-    <h1>Tarot Fortune Reader</h1>
+    <h1 style="text-align: center;">Tarot Fortune Reader</h1>
   </header>
 
   <main>
     <!-- Step 1: Selection -->
-    <section id="step-advice-selection">     
+    <section id="step-advice-selection" class="panel">     
         <p>Please select the area of your life you'd like guidance on:</p>
         <button id="career">Career Advice</button>
         <button id="relationships">Relationship Advice</button>
     </section>
 
-    <section id="global-elements">
+    <section id="global-elements"  class="panel">
         <h2 id="current-question-asked"></h2>
     </section>
 
     <!--  Step 2: Card Selection -->
-    <section id="step-card-selection">
+    <section id="step-card-selection" class="panel">
         <p><strong>Choose a Card for Your Reading</strong></p>
         <div class="card-deck">
             <!-- render cards from JSON data -->
@@ -36,25 +36,19 @@
 
 
     <!-- Step 3: Result and LLM Processing -->
-    <section id="step-card-reading">
+    <section id="step-card-reading" class="panel">
         <div style="display: flex">
             <img id="currently-selected-card-image" alt="Selected Card">
     
             <div>
-                <h4>You have selected: <em id="currently-selected-card"></em>  </h4>
-                <p id="reading-card-results"></p>
+                <h3 id="currently-selected-card-text"></h3>
+                <p id="reading-card-results"></p>       
+                <button id="next-question-button" >Continue to next question</button>            
+                <!-- if there are no more questions, the button will say go to next state -->
+                <button id="go-to-summary-button" style="display: none" > Go to Summary</button>         
             </div>
         </div>
 
-        <div class="result">            
-
-            <!-- <p>LLM Insight: {{ LLMprocessingResult }}</p> -->
-             <button id="next-question-button" >Continue to next question</button>
-            
-            <!-- if there are no more questions, the button will say go to next state -->
-            <button id="go-to-summary-button" style="display: none" > Go to Summary</button>
-
-        </div>
     </section>
 
 
@@ -62,14 +56,14 @@
 
 
     <!-- Step 5: Summary -->
-    <section id="step-summary">
+    <section id="step-summary" class="panel">
         <h2>Your Tarot Reading Summary</h2>
         <p id="summary-of-full-reading"></p>
         <button id="finish-button">Finish</button>
     </section>
 
     <!-- Step 6: Parting Words and Quote -->
-    <section id="step-closing-words">
+    <section id="step-closing-words" class="panel">
         <h2>May the Cards Guide You...</h2>
         <p>Remember, the cards are merely a guide. Trust your inner wisdom.</p>
         <p id="closing-words-text"></p>

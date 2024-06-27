@@ -184,9 +184,9 @@ export class TarotReading
 
 
         // show card information on DOM with ID currently-selected-card
-        document.getElementById('currently-selected-card').innerText = `${selected_card.name}`;
+        document.getElementById('currently-selected-card-text').innerText = `${selected_card.name}`;
         if(card_reverse_status_text === 'reversed') {
-            document.getElementById('currently-selected-card').innerText += ` (Reversed)`;
+            document.getElementById('currently-selected-card-text').innerText += ` (Reversed)`;
             selected_card_dom_image.alt += ' (Reversed)'
             selected_card_dom_image.classList.add('reversed')
         }

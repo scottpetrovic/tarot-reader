@@ -2,9 +2,6 @@ TODO List
 ----------
 - get ollama running in background and make API calls
 - finish getting parting words and final output together
-- add 50/50 logic to have an upside card (reversals)
-- Better display for cards so they are stacked a bit more
-- show background image for card instead of saying what it is
 - have game UI design for UI elements to make more interesting looking
 - reference "Tarot mystery" for super nintendo for visual ideas
 
