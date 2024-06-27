@@ -10,6 +10,7 @@
 
 html {
     background-color: #3b191f;
+    background-image: url('./images/background-2.webp');
 }
 
 
@@ -26,18 +27,22 @@ p, button {
 }
 
 button {
-    background: rgb(223 235 255);
-    color: grey;;
+    background: rgb(105 28 99);
+    color: white;
     padding: 1.0rem;
     border: none;
-    box-shadow: 3px 3px 3px grey;
+    box-shadow: 3px 3px 3px #2b4e63;
     margin: 0.5rem;
     border-radius: 3px;
     cursor: pointer;
+
+    transition-property: all;
+    transition-duration: 0.5s;
+
 }
 button:hover {
-    background: rgb(210, 221, 240);
-    color: grey;
+    background: rgb(138, 38, 129);
+
 }
 
 
@@ -74,6 +79,7 @@ button:hover {
 }
 
 #global-elements {
+    padding-top: 2rem;
     padding-bottom: 0;
 }
 
@@ -92,6 +98,10 @@ button:hover {
     box-shadow: 1px 4px 20px 0px grey;
 }
 
+#step-advice-selection {
+    text-align: center;
+}
+
 .reversed {
     transform: rotate(180deg);
     transition-duration: 2.0s;
@@ -101,7 +111,8 @@ button:hover {
 section.panel{
     display: flex;
     max-width: 60rem;
-    margin: auto auto;
+    margin: auto 5rem;
     padding: 2rem;
     background: #d3c8c8;
+    position: relative;
 }

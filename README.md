@@ -1,9 +1,9 @@
 TODO List
 ----------
-- get ollama running in background and make API calls
-- finish getting parting words and final output together
-- have game UI design for UI elements to make more interesting looking
 - reference "Tarot mystery" for super nintendo for visual ideas
+- finesse the LLM text. 
+--- Responses don't need to mention that what the person selected at the beginning
+--- Talk a bit more old english, so it sounds more ancient and mysterious
 
 
 ## Running instructions for web project

@@ -62,6 +62,21 @@ export class TarotReading
             this.transitionState(this.states.CLOSING_WORDS)
         });
 
+        const play_pause_button = document.getElementById('play-pause-button');
+        play_pause_button.addEventListener('click', () => {
+            const audio_player = document.getElementById('music-player');
+
+            if(audio_player.paused) {
+                audio_player.play();
+                play_pause_button.innerText = 'Pause Music';
+            }
+            else {
+                audio_player.pause();
+                play_pause_button.innerText = 'Play Music';
+            }
+
+        });
+
     }
 
     // State transition function
@@ -222,10 +237,17 @@ export class TarotReading
         const reading_card_dom_element = document.getElementById('reading-card-results');
         for await (const part of response) {
             reading_card_dom_element.innerText += part.message.content;
+            this.play_click_sound()
         }
 
         // this will get called when the for await loop is done...effectively the end of the API call
         this.question_answers_memory.push(reading_card_dom_element.innerHTML)
+    }
+
+    play_click_sound() {
+        console.log('play click sound')
+        var clickSound = new Audio('text-click.mp3'); 
+        clickSound.play();
     }
    
 
