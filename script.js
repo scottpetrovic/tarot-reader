@@ -126,8 +126,14 @@ export class TarotReading
     show_next_question() {
         this.current_question_index += 1
         let question = this.five_card_spread_questions[this.current_question_index]
-        document.getElementById('current-question-asked').innerText = question
+        let elements = document.getElementsByClassName('current-question-asked');
+        
 
+        for (let i = 0; i < elements.length; i++) {
+            console.log( elements[i])
+            elements[i].innerHTML = question; 
+            elements[i].style.display = 'block';
+        }
     }
 
     build_cards_to_select()
@@ -254,7 +260,7 @@ export class TarotReading
 
     async show_summary()
     {
-        document.getElementById('current-question-asked').style.display = 'none';
+        document.getElementsByClassName('current-question-asked').style.display = 'none';
 
         // LLM API trying to summarize everything and summarize the reading.
         // concatenate everything in the question_answers_memory array

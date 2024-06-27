@@ -56,26 +56,47 @@ button:hover {
 
 .card {
     border-radius: 5px; /* Rounded corners */
-    width: 70px; /* Fixed width */
-    height: 120px; /* Fixed height */
-    box-shadow: 5px 3px 1px rgb(0 0 0 / 41%);
+    width: 111px; /* Fixed width */
+    height: 192px; /* Fixed height */
     display: inline-flex;
     cursor: pointer;
     background-image: url('./images/card-back-small.jpg');
     background-size: cover;
     transition-property: all;
     transition-duration: 0.2s;
-    margin: 1rem -1.5rem;
+    margin: 1rem -2.9rem;
     z-index: 0; /* Explicitly set z-index to avoid z-index shifts with hover event */
 }
 .card:hover {
-    transform: translate(-5px, 20px);
+    transform: translate(-20px, 25px);
+    box-shadow: 5px 3px 7px rgba(68, 61, 61, 0.377);
 }
 
-#current-question-asked {
-    margin: 0 auto;
+.direction-text {
+    text-align: center; 
+    font-size: 30px;
+}
+
+.reversed {
+    transform: rotate(180deg);
+    transition-duration: 2.0s;
+    transition-property: transform;
+}
+
+section.panel{
     display: flex;
+    max-width: 60rem;
+    margin: auto auto;
+    padding: 2rem;
+    background: #d3c8c8;
+    position: relative;
+}
+
+.current-question-asked {
+    margin: auto auto;
     font-size: 50px;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 #global-elements {
@@ -102,17 +123,9 @@ button:hover {
     text-align: center;
 }
 
-.reversed {
-    transform: rotate(180deg);
-    transition-duration: 2.0s;
-    transition-property: transform;
+#play-pause-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
-section.panel{
-    display: flex;
-    max-width: 60rem;
-    margin: auto 5rem;
-    padding: 2rem;
-    background: #d3c8c8;
-    position: relative;
-}

@@ -17,18 +17,16 @@
   <main>
     <!-- Step 1: Selection -->
     <section id="step-advice-selection" class="panel">     
-        <p>Please select the area of your life you'd like guidance on:</p>
+        <p class="direction-text">Please select the area of your life you'd like guidance on:</p>
         <button id="career">Career Advice</button>
         <button id="relationships">Relationship Advice</button>
     </section>
 
-    <section id="global-elements"  class="panel">
-        <h2 id="current-question-asked"></h2>
-    </section>
 
     <!--  Step 2: Card Selection -->
     <section id="step-card-selection" class="panel">
-        <p style="text-align: center;">Choose a Card for Your Reading</p>
+        <h2 class="current-question-asked"></h2>
+        <p class="direction-text">Choose a Card for Your Reading</p>
         <div class="card-deck">
             <!-- render cards from JSON data -->
         </div>
@@ -37,15 +35,19 @@
 
     <!-- Step 3: Result and LLM Processing -->
     <section id="step-card-reading" class="panel">
-        <img id="currently-selected-card-image" alt="Selected Card">
-        <div style="display: flex; flex-direction: column;">            
-    
+        <h2 class="current-question-asked"></h2>
+       
+        <div style="display: flex; flex-direction: row;">    
             
-                <h3 id="currently-selected-card-text"></h3>
-                <p id="reading-card-results"></p>       
-                <button id="next-question-button" >Continue to next question</button>            
-                <!-- if there are no more questions, the button will say go to next state -->
-                <button id="go-to-summary-button" style="display: none" > Go to Summary</button>         
+          <img id="currently-selected-card-image" alt="Selected Card">
+          <div>
+            <h3 id="currently-selected-card-text"></h3>
+            <p id="reading-card-results"></p>       
+            <button id="next-question-button" >Continue to next question</button>            
+            <!-- if there are no more questions, the button will say go to next state -->
+            <button id="go-to-summary-button" style="display: none" > Go to Summary</button>   
+          </div>
+      
             
         </div>
 
