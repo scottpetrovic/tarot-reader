@@ -8,6 +8,7 @@ export class TarotReading
     constructor() {
 
         this.states = {
+            MUSIC_SELECTION: "step-enhance-mood-music",
             ADVICE_SELECTION: "step-advice-selection",
             CARD_SELECTION: "step-card-selection",
             CARD_READING: "step-card-reading",
@@ -27,7 +28,7 @@ export class TarotReading
         this.question_answers_memory = []; // store answers to questions for ending summary
 
         this.advice_type = null; // career or relationship advice
-        this.currentState = this.states.ADVICE_SELECTION; // initial screen select
+        this.currentState = this.states.MUSIC_SELECTION; // initial screen select
         this.tarot_deck = tarot_data; // JSON data of tarot cards
         this.selected_cards = []; // selected cards for reading. makes sure we don't pull them again
 
@@ -62,7 +63,12 @@ export class TarotReading
             this.transitionState(this.states.CLOSING_WORDS)
         });
 
-        const play_pause_button = document.getElementById('play-pause-button');
+
+        document.getElementById('ignore-music-button').addEventListener('click', () => {
+            this.transitionState(this.states.ADVICE_SELECTION);
+        })
+
+        const play_pause_button = document.getElementById('enable-music-button');
         play_pause_button.addEventListener('click', () => {
             const audio_player = document.getElementById('music-player');
 
@@ -75,6 +81,7 @@ export class TarotReading
                 play_pause_button.innerText = 'Play Music';
             }
 
+            this.transitionState(this.states.ADVICE_SELECTION);
         });
 
     }
