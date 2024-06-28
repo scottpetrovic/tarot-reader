@@ -19,12 +19,20 @@ export class TarotReading
         };
 
         this.five_card_spread_questions = [
-            "What is happening at the moment?",
-            "How can I weather it easily and with grace?",
-            "What is the lesson?",
-            "What is leaving at this time?",
-            "What is arriving at this time?"
+            "What is the true nature of the situation at hand?",
+            "What influences or aspirations are at work from above?",
+            "What foundations underlie the current situation?",
+            "What energies are waning or passing away?",
+            "What new energies or possibilities are emerging?"
         ]
+        this.five_card_spread_question_descriptions = [
+            'The first card, the centerpiece of our Five-Card Cross. It represents the core essence of your inquiry.',
+            'This card represents the overarching energies that influence your path from on high. It may reveal the goals you are striving towards or spiritual or mental influences affecting the situation.',
+            'Like roots stretching deep into the earth, this card reveals past events or decisions that have led to this moment or subconscious influences.',
+            'Like the setting sun, this card illuminates situations or influences that are coming to an end or aspects of your life or self that you are leaving behind.',
+            'Like the first rays of dawn, this card illuminates, this cards shows new opportunities or potentials on the horizon. '
+        ]
+
         this.current_question_index = -1;
         this.question_answers_memory = []; // store answers to questions for ending summary
 
@@ -41,6 +49,7 @@ export class TarotReading
 
             // slow down tarot card animation video man
             document.getElementById('tarot-reader-person').playbackRate  = 0.2;
+            document.getElementById('tarot-reader-person').play();
         });  
 
        
@@ -158,6 +167,11 @@ export class TarotReading
         this.current_question_index += 1
         let question = this.five_card_spread_questions[this.current_question_index]
         let elements = document.getElementsByClassName('current-question-asked');
+
+        // show description of what card will represent
+        document.getElementById('current-question-description').innerText = this.five_card_spread_question_descriptions[this.current_question_index] +
+        ' Which card whispers secrets meant for your ears alone?';
+
         
         for (let i = 0; i < elements.length; i++) {
             console.log( elements[i])
@@ -247,7 +261,7 @@ export class TarotReading
         const message_data =  [
             {
                 "role": 'assistant',
-                'content': 'You are a fortune teller speaking in an intriguing and mysterious way, helping me read my fortune. I will provide you a question I want answered and you will provide me response. Keep the response to 2 sentences. I already know the card, so you do not need to say it in the answer. The card will have a direction of upright or reversed, so please update your response based on the information provided.'
+                'content': 'You are a fortune teller speaking in an intriguing and mysterious way, helping me read my fortune. We will use the five-card cross configuration. I will provide you a question I want answered and you will provide me response. Keep the response to 2 sentences. I already know the card, so you do not need to say it in the answer. The card will have a direction of upright or reversed, so please update your response based on the information provided.'
             },
             { "role": "user", 
                 "content": `My question is ${this.five_card_spread_questions[this.current_question_index]} and I have picked the card ${this.get_card_by_id(last_card_id).name }. This direction of the card is ${card_reverse_status_text}. The reading results for the card need to be anchored to  my ${this.advice_type} and how it affects that.`

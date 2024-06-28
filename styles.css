@@ -10,24 +10,25 @@
 
 html {
     background-color: #3b191f;
-    background-image: url('./images/background-2.webp');
+    background-image: url(/images/background-2-pixelated.gif);
+    background-size: cover;
+    image-rendering: pixelated;
 }
 
+main {
+    margin-top: 2rem;
+}
 
 h1{
     font-family: "Jacquard 24", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    color: white;
-    font-size: 85px;
+    font-size: 80px;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    color: purple;
 }
 
 h2 {
     font-size: 50px;
-}
-
-p, button {
-    font-size: 25px;
 }
 
 button {
@@ -39,16 +40,17 @@ button {
     margin: 0.5rem;
     border-radius: 3px;
     cursor: pointer;
-
     transition-property: all;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
+    font-size: 30px;
 
 }
 button:hover {
     background: rgb(138, 38, 129);
-
 }
-
+button:active {
+    transform: translate(3px, 3px);
+}
 
 
 .card-deck {
@@ -85,6 +87,14 @@ button:hover {
     font-size: 30px;
 }
 
+#reading-card-results, #summary-of-full-reading {
+    font-size: 30px;
+}
+
+.strong {
+    font-size: 30px;
+}
+
 .reversed {
     transform: rotate(180deg);
     transition-duration: 2.0s;
@@ -93,11 +103,19 @@ button:hover {
 
 section.panel{
     display: flex;
-    max-width: 60rem;
+    max-width: 75rem;
     margin: auto auto;
-    padding: 2rem;
-    background: #d3c8c8;
+    padding: 5rem;
     position: relative;
+
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator */
+    border-image-slice: 19 15 16 15 fill;
+    border-image-width: 10px 10px 10px 10px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: round round;
+    border-image-source: url("./images/border-image-texture.png");
+    border-style: solid;
+
 }
 
 .current-question-asked {

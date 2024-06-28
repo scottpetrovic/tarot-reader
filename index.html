@@ -3,16 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tarot Fortune Reader</title>
+  <title>Whispers of Fate</title>
   <link rel="stylesheet" href="styles.css"> 
   <script src="script.js" type="module" defer></script>
 
 </head>
 
 <body>
-  <header>
-    <h1 style="text-align: center;">Tarot Fortune Reader</h1>
-  </header>
 
   <main>
 
@@ -24,38 +21,54 @@
         Your browser does not support the video tag.
       </video>
 
-      <p>Greetings, seeker. I am Hector, keeper of arcane wisdom and interpreter of the tarot's mystic language. Before you lie the keys to unlock the secrets of your destiny. The cards whisper truths both profound and unsettling, revealing paths yet untrodden and choices yet unmade. But heed my warning: once unveiled, this knowledge cannot be unlearned. It may challenge your perceptions and alter the very course of your life. Are you truly ready to peer beyond the veil and embrace the wisdom the tarot offers? The choice, dear seeker, is yours alone to make.</p>
+      <h1 style="text-align: center;">Whispers of Fate</h1>
 
-      <button ID="begin-tarot-reading-button">Begin analyzing my fortune</button>
+      <p class="direction-text">Greetings, seeker. I am Hector, keeper of arcane wisdom and interpreter of the tarot's mystic language. The cards whisper truths both profound and unsettling, revealing paths yet untrodden and choices yet unmade. But heed my warning: once unveiled, THIS KNOWLEDGE CANNOT BE UNLEARNED. It may challenge your perceptions and alter the very course of your life. Are you truly ready to peer beyond the veil and embrace the wisdom the tarot offers? The choice, dear seeker, is yours alone to make.</p>
+
+      <button ID="begin-tarot-reading-button">Unravel the threads of fate</button>
     </section>
 
 
     <section id="step-enhance-mood-music" class="panel center">
-        <p class="direction-text">Music creates better focus and helps channel your energy into the reading. </p>
+
+      <video id="tarot-reader-person" autoplay loop style="max-width: 100%">
+        <source src="./images/tarot-card-reader.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+        <p class="direction-text">Before we begin, we cleanse and consecrate our surroundings, banishing negative energies and inviting in the cosmic forces.. THE CARDS TEMBLE WITH ANTICIPATION, eager to reveal their secrets. Now, I ask you this: Do you wish to enhance our connection to the cosmic energies by embracing the power of music? </p>
        
-        <button id="enable-music-button">Play Music</button>
-        <button id="ignore-music-button">No Music</button>
+        <button id="enable-music-button">Unlock the sonic gateway</button>
+        <button id="ignore-music-button">Embrace silence</button>
     </section>
 
 
     <!-- Step 1: Selection -->
-    <section id="step-advice-selection" class="panel">     
-        <p class="direction-text">Please select the area of your life you'd like guidance on:</p>
-        <button id="career">Career Advice</button>
-        <button id="relationships">Relationship Advice</button>
+    <section id="step-advice-selection" class="panel">   
+      
+      <video id="tarot-reader-person" autoplay loop style="max-width: 100%">
+        <source src="./images/tarot-card-reader.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+        <p class="direction-text">Before us lie two paths of enlightenment, each promising profound insights. Which realm calls to you most urgently in this moment?</span> </p>
+        <button id="career">the realm of worldly pursuits and life's work</button>
+        <button id="relationships">the dance of human connection and emotion</button>
     </section>
 
     <!-- Step 1.5 Shuffle the deck-->
     <section id="step-shuffle-deck" class="panel center">
-      <p class="direction-text">The cards need your energy for shuffling. Please shuffle the deck and contemplate your future.</p>
      
-      <video id="card-shuffling-video">
+      <video id="card-shuffling-video" >
         <source src="/images/shuffle.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
+
+      <p class="direction-text">The time has come to forge your connection with the arcane energies that pulse through these ancient cards. As you shuffle, breathe deeply, allowing your intentions and queries to flow from your mind, through your heart, and into the very fibers of the cards. With each movement, visualize your energy intertwining with the deck's mystical aura. Shuffle until you feel a subtle shift, a whisper in your soul that signals alignment with the cosmic forces.</p>
+
       <div>
         <button id="shuffle-deck-button">Shuffle</button>
-        <button id="done-shuffling-button">Next</button>
+        <button id="done-shuffling-button">The cards are pulsating and waiting your next command</button>
       </div>
   </section>
 
@@ -64,7 +77,8 @@
     <!--  Step 2: Card Selection -->
     <section id="step-card-selection" class="panel">
         <h2 class="current-question-asked"></h2>
-        <p class="direction-text">Choose a Card for Your Reading</p>
+        <p id="current-question-description" class="direction-text"></p>
+        <!-- <p >Allow your hand to hover above the spread, feeling the subtle energies emanating from each card. Which one calls to your spirit? Which one whispers secrets meant for your ears alone?</p> -->
         <div class="card-deck">
             <!-- render cards from JSON data -->
         </div>
@@ -81,9 +95,9 @@
           <div>
             <h3 id="currently-selected-card-text"></h3>
             <p id="reading-card-results"></p>       
-            <button id="next-question-button" >Continue to next question</button>            
+            <button id="next-question-button" >I am ready to continue</button>            
             <!-- if there are no more questions, the button will say go to next state -->
-            <button id="go-to-summary-button" style="display: none" > Go to Summary</button>   
+            <button id="go-to-summary-button" style="display: none" >Gaze upon the Essence of the reading</button>   
           </div>
       
             
