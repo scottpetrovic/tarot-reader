@@ -8,8 +8,10 @@ export class TarotReading
     constructor() {
 
         this.states = {
+            INTRODUCTION: 'step-introduction',
             MUSIC_SELECTION: "step-enhance-mood-music",
             ADVICE_SELECTION: "step-advice-selection",
+            SHUFFLE_DECK: "step-shuffle-deck",
             CARD_SELECTION: "step-card-selection",
             CARD_READING: "step-card-reading",
             SUMMARY: "step-summary",
@@ -24,24 +26,33 @@ export class TarotReading
             "What is arriving at this time?"
         ]
         this.current_question_index = -1;
-
         this.question_answers_memory = []; // store answers to questions for ending summary
 
         this.advice_type = null; // career or relationship advice
-        this.currentState = this.states.MUSIC_SELECTION; // initial screen select
-        this.tarot_deck = tarot_data; // JSON data of tarot cards
+        this.currentState = this.states.INTRODUCTION; // initial screen select
+        this.tarot_deck = tarot_data; // JSON data of tarot cards      
         this.selected_cards = []; // selected cards for reading. makes sure we don't pull them again
+        this.audio_enabled = false;
 
         // Initialize UI with the initial state when HTML elements are loaded
         document.addEventListener('DOMContentLoaded', () => {
             this.setup_click_events()
             this.transitionState(this.currentState);
+
+            // slow down tarot card animation video man
+            document.getElementById('tarot-reader-person').playbackRate  = 0.2;
         });  
+
        
     }
 
     setup_click_events() {
         const self = this; // Ensure 'this' inside the event listeners refers to the class instance
+
+
+        document.getElementById('begin-tarot-reading-button').addEventListener('click', () => {
+            this.transitionState(this.states.MUSIC_SELECTION);
+        });
 
         document.getElementById('career').addEventListener('click', function() {
             self.advice_type_selected(this.id);
@@ -65,10 +76,13 @@ export class TarotReading
 
 
         document.getElementById('ignore-music-button').addEventListener('click', () => {
+            this.audio_enabled = false;
             this.transitionState(this.states.ADVICE_SELECTION);
         })
 
         const play_pause_button = document.getElementById('enable-music-button');
+
+        this.audio_enabled = true;
         play_pause_button.addEventListener('click', () => {
             const audio_player = document.getElementById('music-player');
 
@@ -82,6 +96,16 @@ export class TarotReading
             }
 
             this.transitionState(this.states.ADVICE_SELECTION);
+        });
+
+        // shuffling step click events
+        document.getElementById('shuffle-deck-button').addEventListener('click', () => {
+            this.tarot_deck = this.shuffle_deck(this.tarot_deck)            
+            document.getElementById('card-shuffling-video').play(); // restart video of person shuffling
+        });
+
+        document.getElementById('done-shuffling-button').addEventListener('click', () => {
+            this.transitionState(this.states.CARD_SELECTION);
         });
 
     }
@@ -106,7 +130,7 @@ export class TarotReading
 
         // we have the card selection, now do the reading
         if(this.currentState === this.states.CARD_READING) {
-            this.perform_card_reading()           
+            this.perform_card_reading()
         }
 
         if(this.currentState === this.states.SUMMARY)
@@ -135,7 +159,6 @@ export class TarotReading
         let question = this.five_card_spread_questions[this.current_question_index]
         let elements = document.getElementsByClassName('current-question-asked');
         
-
         for (let i = 0; i < elements.length; i++) {
             console.log( elements[i])
             elements[i].innerHTML = question; 
@@ -145,16 +168,11 @@ export class TarotReading
 
     build_cards_to_select()
     {
-        // eventually need to remove IDs for cards that were already selected
-    
         // render cards from JSON data
         let card_deck = document.querySelector('.card-deck');
     
         // clear all existing cards that might exist in .card-deck div
         card_deck.innerHTML = '';
-    
-    
-        this.tarot_deck = this.shuffle_deck(this.tarot_deck) // shuffle deck of cards
 
         // allow cards to be upside down randomly (called reveral in tarot)
         // this changes the meaning of the card
@@ -169,20 +187,11 @@ export class TarotReading
             // create the div element for each card
             let card_div = document.createElement('div');
             card_div.classList.add('card');
-            card_div.id = `card-${index + 1}`;
-            
-            // card_div.innerHTML = `Card ${card.id}: ${card.name}`;            
-            // if(card.reversal) {
-            //     card_div.innerHTML += ` (Reversed)`;
-            // }
-
+            card_div.id = `card-${index + 1}`;            
             card_deck.appendChild(card_div);
     
             card_div.addEventListener('click', () => {
-                //console.log(`Clicked on card ${index + 1}: ${card.name} ${card.id}`);
-                
-                this.selected_cards.push(card.id); // Add any action you want to perform on click
-              
+                this.selected_cards.push(card.id); // Add any action you want to perform on click              
                 this.tarot_deck = this.tarot_deck.filter(car => car.id !== card.id);    // remove item that was selected
                 this.transitionState(this.states.CARD_READING);
             });
@@ -209,7 +218,7 @@ export class TarotReading
         selected_card_dom_image.src = `./images/${selected_card.arcanaType}/${selected_card.imageName}`;
         selected_card_dom_image.alt = selected_card.name
 
-
+        
 
         // show card information on DOM with ID currently-selected-card
         document.getElementById('currently-selected-card-text').innerText = `${selected_card.name}`;
@@ -238,7 +247,7 @@ export class TarotReading
         const message_data =  [
             {
                 "role": 'assistant',
-                'content': 'You are a fortune teller helping me read my fortune. I will provide you a question I want answered and you will provide me response. Keep the response to 1 paragraph. The card will have a direction of upright or reversed, so please update your response based on the information provided.'
+                'content': 'You are a fortune teller speaking in an intriguing and mysterious way, helping me read my fortune. I will provide you a question I want answered and you will provide me response. Keep the response to 2 sentences. I already know the card, so you do not need to say it in the answer. The card will have a direction of upright or reversed, so please update your response based on the information provided.'
             },
             { "role": "user", 
                 "content": `My question is ${this.five_card_spread_questions[this.current_question_index]} and I have picked the card ${this.get_card_by_id(last_card_id).name }. This direction of the card is ${card_reverse_status_text}. The reading results for the card need to be anchored to  my ${this.advice_type} and how it affects that.`
@@ -250,7 +259,11 @@ export class TarotReading
         const reading_card_dom_element = document.getElementById('reading-card-results');
         for await (const part of response) {
             reading_card_dom_element.innerText += part.message.content;
-            this.play_click_sound()
+
+            if( this.audio_enabled)
+            {
+                this.play_click_sound()
+            }
         }
 
         // this will get called when the for await loop is done...effectively the end of the API call
@@ -258,7 +271,6 @@ export class TarotReading
     }
 
     play_click_sound() {
-        console.log('play click sound')
         var clickSound = new Audio('text-click.mp3'); 
         clickSound.play();
     }
@@ -267,7 +279,11 @@ export class TarotReading
 
     async show_summary()
     {
-        document.getElementsByClassName('current-question-asked').style.display = 'none';
+        // hide the questions
+        let elements = document.getElementsByClassName('current-question-asked');        
+        for (let i = 0; i < elements.length; i++) {       
+            elements[i].style.display = 'none';
+        }
 
         // LLM API trying to summarize everything and summarize the reading.
         // concatenate everything in the question_answers_memory array
@@ -292,10 +308,11 @@ export class TarotReading
     {
         // console.log('advice type selected in javascript')
         this.advice_type = type;
-        this.transitionState(this.states.CARD_SELECTION);    
+        this.transitionState(this.states.SHUFFLE_DECK);    
     }
     
-    shuffle_deck(array) {
+    shuffle_deck(array) 
+    {
         for (let i = array.length - 1; i > 0; i--) {
             // Generate a random index lower than the current position
             const j = Math.floor(Math.random() * (i + 1));

@@ -17,13 +17,25 @@
   <main>
 
 
-    <section id="step-enhance-mood-music" class="panel">
+    <section id="step-introduction" class="panel center">
+  
+      <video id="tarot-reader-person" autoplay loop style="max-width: 100%">
+        <source src="./images/tarot-card-reader.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <p>Greetings, seeker. I am Hector, keeper of arcane wisdom and interpreter of the tarot's mystic language. Before you lie the keys to unlock the secrets of your destiny. The cards whisper truths both profound and unsettling, revealing paths yet untrodden and choices yet unmade. But heed my warning: once unveiled, this knowledge cannot be unlearned. It may challenge your perceptions and alter the very course of your life. Are you truly ready to peer beyond the veil and embrace the wisdom the tarot offers? The choice, dear seeker, is yours alone to make.</p>
+
+      <button ID="begin-tarot-reading-button">Begin analyzing my fortune</button>
+    </section>
+
+
+    <section id="step-enhance-mood-music" class="panel center">
         <p class="direction-text">Music creates better focus and helps channel your energy into the reading. </p>
        
         <button id="enable-music-button">Play Music</button>
         <button id="ignore-music-button">No Music</button>
     </section>
-
 
 
     <!-- Step 1: Selection -->
@@ -32,6 +44,21 @@
         <button id="career">Career Advice</button>
         <button id="relationships">Relationship Advice</button>
     </section>
+
+    <!-- Step 1.5 Shuffle the deck-->
+    <section id="step-shuffle-deck" class="panel center">
+      <p class="direction-text">The cards need your energy for shuffling. Please shuffle the deck and contemplate your future.</p>
+     
+      <video id="card-shuffling-video">
+        <source src="/images/shuffle.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div>
+        <button id="shuffle-deck-button">Shuffle</button>
+        <button id="done-shuffling-button">Next</button>
+      </div>
+  </section>
+
 
 
     <!--  Step 2: Card Selection -->
@@ -76,7 +103,7 @@
     </section>
 
     <!-- Step 6: Parting Words and Quote -->
-    <section id="step-closing-words" class="panel">
+    <section id="step-closing-words" class="panel center">
         <h2>May the Cards Guide You...</h2>
         <p>Remember, the cards are merely a guide. Trust your inner wisdom.</p>
         <p id="closing-words-text"></p>
