@@ -31,6 +31,7 @@ h2 {
     font-size: 50px;
 }
 
+
 button {
     background: rgb(105 28 99);
     color: white;
@@ -82,17 +83,12 @@ button:active {
     text-align: center;
 }
 
-.direction-text {
-    text-align: center; 
+#reading-card-results, #summary-of-full-reading, p {
     font-size: 30px;
 }
 
-#reading-card-results, #summary-of-full-reading {
-    font-size: 30px;
-}
-
-.strong {
-    font-size: 30px;
+p {
+    text-align: left;
 }
 
 .reversed {

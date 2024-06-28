@@ -26,11 +26,11 @@ export class TarotReading
             "What new energies or possibilities are emerging?"
         ]
         this.five_card_spread_question_descriptions = [
-            'The first card, the centerpiece of our Five-Card Cross. It represents the core essence of your inquiry.',
-            'This card represents the overarching energies that influence your path from on high. It may reveal the goals you are striving towards or spiritual or mental influences affecting the situation.',
-            'Like roots stretching deep into the earth, this card reveals past events or decisions that have led to this moment or subconscious influences.',
-            'Like the setting sun, this card illuminates situations or influences that are coming to an end or aspects of your life or self that you are leaving behind.',
-            'Like the first rays of dawn, this card illuminates, this cards shows new opportunities or potentials on the horizon. '
+            'The first question, the centerpiece of our Five-Card Cross. It represents the core essence of your inquiry.',
+            'This question represents the overarching energies that influence your path from on high. It may reveal the goals you are striving towards or spiritual or mental influences affecting the situation.',
+            'Like roots stretching deep into the earth, this question reveals past events or decisions that have led to this moment or subconscious influences.',
+            'Like the setting sun, this question illuminates situations or influences that are coming to an end or aspects of your life or self that you are leaving behind.',
+            'Like the first rays of dawn, this question illuminates and shows new opportunities or potentials on the horizon. '
         ]
 
         this.current_question_index = -1;
@@ -220,6 +220,9 @@ export class TarotReading
     async perform_card_reading()
     {
         document.getElementById('reading-card-results').innerText = ''; // clear out previous reading
+        document.getElementById('next-question-button').style.display = 'none';
+        document.getElementById('go-to-summary-button').style.display = 'none';
+
 
         // get last card ID
         let last_card_id = this.selected_cards[this.selected_cards.length - 1];
@@ -244,18 +247,7 @@ export class TarotReading
         else {
             selected_card_dom_image.classList.remove('reversed')
         }
-    
-    
-        // hide the continue button if we are at the last question
-        // and show the summary and closing words
-        if(this.five_card_spread_questions.length === this.current_question_index + 1) {
-            
-            // hide the next question button
-            document.getElementById('next-question-button').style.display = 'none';
-    
-            // show the go to summary button
-            document.getElementById('go-to-summary-button').style.display = 'block';
-        }
+
 
         // give instructions to the assistant (AI) first telling it is a fortune teller, and any contextual information it needs to know
         const message_data =  [
@@ -282,6 +274,16 @@ export class TarotReading
 
         // this will get called when the for await loop is done...effectively the end of the API call
         this.question_answers_memory.push(reading_card_dom_element.innerHTML)
+
+
+        // show the buttons since the card data has came back
+        if(this.five_card_spread_questions.length === this.current_question_index + 1) {            
+            document.getElementById('go-to-summary-button').style.display = 'block';
+        }
+        else {
+            document.getElementById('next-question-button').style.display = 'block';
+        }
+
     }
 
     play_click_sound() {

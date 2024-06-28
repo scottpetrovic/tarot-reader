@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Whispers of Fate</title>
+  <title>Whispers of Tarot</title>
   <link rel="stylesheet" href="styles.css"> 
   <script src="script.js" type="module" defer></script>
 
@@ -21,9 +21,9 @@
         Your browser does not support the video tag.
       </video>
 
-      <h1 style="text-align: center;">Whispers of Fate</h1>
+      <h1 style="text-align: center;">Whispers of Tarot</h1>
 
-      <p class="direction-text">Greetings, seeker. I am Hector, keeper of arcane wisdom and interpreter of the tarot's mystic language. The cards whisper truths both profound and unsettling, revealing paths yet untrodden and choices yet unmade. But heed my warning: once unveiled, THIS KNOWLEDGE CANNOT BE UNLEARNED. It may challenge your perceptions and alter the very course of your life. Are you truly ready to peer beyond the veil and embrace the wisdom the tarot offers? The choice, dear seeker, is yours alone to make.</p>
+      <p class="left-align">Greetings, seeker. I am Hector, keeper of arcane wisdom and interpreter of the tarot's mystic language. The cards whisper truths both profound and unsettling, revealing paths yet untrodden and choices yet unmade. But heed my warning: once unveiled, THIS KNOWLEDGE CANNOT BE UNLEARNED. It may challenge your perceptions and alter the very course of your life. Are you truly ready to peer beyond the veil and embrace the wisdom the tarot offers? The choice, dear seeker, is yours alone to make.</p>
 
       <button ID="begin-tarot-reading-button">Unravel the threads of fate</button>
     </section>
@@ -36,7 +36,7 @@
         Your browser does not support the video tag.
       </video>
 
-        <p class="direction-text">Before we begin, we cleanse and consecrate our surroundings, banishing negative energies and inviting in the cosmic forces.. THE CARDS TEMBLE WITH ANTICIPATION, eager to reveal their secrets. Now, I ask you this: Do you wish to enhance our connection to the cosmic energies by embracing the power of music? </p>
+        <p class="direction-text">Before we begin, we cleanse and consecrate our surroundings, banishing negative energies and inviting in the cosmic forces. THE CARDS TREMBLE WITH ANTICIPATION, eager to reveal their secrets. Now, I ask, do you wish to enhance our connection to the cosmic energies by embracing the power of music? </p>
        
         <button id="enable-music-button">Unlock the sonic gateway</button>
         <button id="ignore-music-button">Embrace silence</button>
@@ -110,17 +110,29 @@
 
 
     <!-- Step 5: Summary -->
-    <section id="step-summary" class="panel">
-        <h2>Your Tarot Reading Summary</h2>
+    <section id="step-summary" class="panel center">
+      <video id="tarot-reader-person" autoplay loop style="max-width: 100%">
+        <source src="./images/tarot-card-reader.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
         <p id="summary-of-full-reading"></p>
         <button id="finish-button">Finish</button>
     </section>
 
     <!-- Step 6: Parting Words and Quote -->
     <section id="step-closing-words" class="panel center">
-        <h2>May the Cards Guide You...</h2>
-        <p>Remember, the cards are merely a guide. Trust your inner wisdom.</p>
-        <p id="closing-words-text"></p>
+
+      <video id="tarot-reader-person" autoplay loop style="max-width: 100%">
+        <source src="./images/tarot-card-reader.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+
+        <p>Remember, the cards are merely a guide. Trust your inner wisdom. <span id="closing-words-text"></span></p>
+
+        <p class="center">Until we meet again...farewell</p>
+
     </section>
 
   </main>

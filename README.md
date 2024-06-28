@@ -1,11 +1,8 @@
 TODO List
 ----------
 - reference "Tarot mystery" for super nintendo for visual ideas
-- add step for how many times the person wants to shuffle the deck
-- finesse the LLM text. 
---- Responses don't need to mention that what the person selected at the beginning
---- Talk a bit more old english, so it sounds more ancient and mysterious
-
+- Get feedback on things.
+- how/where to host this for more sharing on game dev channel?
 
 
 ## Running instructions for web project
