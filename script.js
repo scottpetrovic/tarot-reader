@@ -130,6 +130,12 @@ export class TarotReading
         document.getElementById(nextState).style.display = 'block'; // Show next state's section        
         this.currentState = nextState; // Update current state
 
+
+        if(this.currentState === this.states.SHUFFLE_DECK) {
+            // hide the tarot-reader-person
+            document.getElementById('tarot-reader-person').style.display = 'none';
+        }
+
         // Do operations and things after state change has been done
         if(this.currentState === this.states.CARD_SELECTION) 
         {
@@ -144,6 +150,9 @@ export class TarotReading
 
         if(this.currentState === this.states.SUMMARY)
         {
+            // show the tarot reader person
+            document.getElementById('tarot-reader-person').style.display = 'block';
+
             this.show_summary()
         }
 
@@ -309,7 +318,7 @@ export class TarotReading
         const summarize_messsage_data =  [
             {
                 "role": 'user',
-                'content': 'You are a fortune teller helping me read my fortune. You have given all the responses needed to my questions. These are the results:' +  all_answers + '. That is the end of the responses. Please provide a summary of the reading in 2 paragraphs at most.'
+                'content': 'You are a fortune teller helping me read my fortune. You have given all the responses needed to my questions. These are the results:' +  all_answers + '. That is the end of the responses. Please provide a summary of the reading in less than 100 words.'
             }
         ];
 

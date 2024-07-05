@@ -3,9 +3,8 @@
 
 * {
     font-family: "VT323", monospace;
-    font-weight: 400;
-    font-style: normal;
-    color: black;
+    color: #1a1875;
+    font-size: 22px;
 }
 
 html {
@@ -21,29 +20,27 @@ main {
 
 h1{
     font-family: "Jacquard 24", system-ui;
-    font-size: 80px;
+    font-size: 50px;
     margin-top: 1rem;
     margin-bottom: 0;
     color: purple;
 }
 
 h2 {
-    font-size: 50px;
+    font-size: 30px;
 }
 
 
 button {
     background: rgb(105 28 99);
     color: white;
-    padding: 1.0rem;
+    padding: 0.5rem 1rem;
     border: none;
     box-shadow: 3px 3px 3px #2b4e63;
     margin: 0.5rem;
-    border-radius: 3px;
     cursor: pointer;
     transition-property: all;
     transition-duration: 0.3s;
-    font-size: 30px;
 
 }
 button:hover {
@@ -57,21 +54,18 @@ button:active {
 .card-deck {
     display: flex;
     flex-wrap: wrap;
-    padding: 3rem;
     padding-top: 0;
 }
 
 .card {
-    border-radius: 5px; /* Rounded corners */
-    width: 111px; /* Fixed width */
-    height: 192px; /* Fixed height */
-    display: inline-flex;
+    width: 50px;
+    height: 88px;
     cursor: pointer;
-    background-image: url('./images/card-back-small.jpg');
+    background-image: url(/images/card-back-small.jpg);
     background-size: cover;
     transition-property: all;
     transition-duration: 0.2s;
-    margin: 1rem -2.9rem;
+    margin: 0.75rem -0.8rem;
     z-index: 0; /* Explicitly set z-index to avoid z-index shifts with hover event */
 }
 .card:hover {
@@ -83,9 +77,6 @@ button:active {
     text-align: center;
 }
 
-#reading-card-results, #summary-of-full-reading, p {
-    font-size: 30px;
-}
 
 p {
     text-align: left;
@@ -93,30 +84,58 @@ p {
 
 .reversed {
     transform: rotate(180deg);
-    transition-duration: 2.0s;
+    transition-duration: 0s;
     transition-property: transform;
 }
 
-section.panel{
+.panel{
     display: flex;
-    max-width: 75rem;
+    max-width: 40rem;
     margin: auto auto;
-    padding: 5rem;
+    padding: 2rem;
     position: relative;
+    column-gap: 2rem;
+    align-items: flex-start;
 
     /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator */
     border-image-slice: 19 15 16 15 fill;
     border-image-width: 10px 10px 10px 10px;
     border-image-outset: 0px 0px 0px 0px;
     border-image-repeat: round round;
-    border-image-source: url("./images/border-image-texture.png");
+    border-image-source: url(/images/border-image-texture.png);
     border-style: solid;
-
 }
+
+#tarot-reader-person {
+    min-width: 50%;
+}
+
+/* media query that makes .panel flex-direction column when screen width is less than 800px */
+@media (max-width: 900px) {
+    .panel {
+        flex-direction: column;
+    }
+
+    #tarot-reader-person {
+        margin: auto; /* center */
+        width: 50%;
+    }
+}
+
+#card-reveal-layout-container {
+    display: flex; 
+    flex-direction: row;
+}
+@media (max-width: 900px) {
+    #card-reveal-layout-container {
+        flex-direction: column;
+    }
+}
+
 
 .current-question-asked {
     margin: auto auto;
-    font-size: 50px;
+    font-size: 30px;
     text-align: center;
     margin-bottom: 2rem;
 }
@@ -128,7 +147,7 @@ section.panel{
 
 
 #currently-selected-card-text {
-    font-size: 46px;
+    font-size: 30px;
     margin: 0;
 }
 
@@ -140,6 +159,12 @@ section.panel{
     margin-right: 2rem;
     box-shadow: 1px 4px 20px 0px grey;
 }
+@media (max-width: 900px) {
+    #currently-selected-card-image {
+        margin: 1rem auto;
+    }
+}
+
 
 #step-advice-selection {
     text-align: center;
