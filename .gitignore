@@ -3,3 +3,4 @@
 Thumbs.db
 
 tarot-reader/node_modules/**
+tarot-reader/dist/**

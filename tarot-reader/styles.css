@@ -153,7 +153,7 @@ p {
 
 #currently-selected-card-image {
     width: 240px;
-    height: 100%;
+    height: auto;
     margin: 0rem;
     display: inline-flex;
     margin-right: 2rem;

@@ -1,5 +1,5 @@
 import tarot_data from './tarot_data.js';
-import ollama from 'ollama';
+import ollama from 'ollama/browser'; // the normal ollama doesn't work with 'npm run build'
 
 import { phrases_for_thinking, fortune_cookie_phrases } from './closing_remarks.js';
 
