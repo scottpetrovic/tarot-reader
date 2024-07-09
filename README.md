@@ -27,3 +27,9 @@ If ollama is not running, you can manually run it with the following command in 
 There is a default port that ollama web server runs on, so you shouldn't have to change anything on the web server
 
 
+# Building things
+
+to build the project run the following:
+    npm run build
+
+

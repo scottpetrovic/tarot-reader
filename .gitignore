@@ -2,4 +2,4 @@
 #Ignore thumbnails created by Windows
 Thumbs.db
 
-node_modules/**
+tarot-reader/node_modules/**
