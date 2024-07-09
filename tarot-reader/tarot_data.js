@@ -183,7 +183,7 @@ const tarot_data = [
         "suit": "Wands",
         "astrologicalCorrespondence": "Aries",
         "reversal": false,
-        "imageName": "wands01.jpg"
+        "imageName": "Wands01.jpg"
     },
     {
         "name": "Two of Wands",
@@ -192,7 +192,7 @@ const tarot_data = [
         "suit": "Wands",
         "astrologicalCorrespondence": "Aries",
         "reversal": false,
-        "imageName": "wands02.jpg"
+        "imageName": "Wands02.jpg"
       },
       {
         "name": "Three of Wands",
@@ -201,7 +201,7 @@ const tarot_data = [
         "suit": "Wands",
         "astrologicalCorrespondence": "Aries",
         "reversal": false,
-        "imageName": "wands03.jpg"
+        "imageName": "Wands03.jpg"
       },
       {
         "name": "Four of Wands",
@@ -210,7 +210,7 @@ const tarot_data = [
         "suit": "Wands",
         "astrologicalCorrespondence": "Aries",
         "reversal": false,
-        "imageName": "wands04.jpg"
+        "imageName": "Wands04.jpg"
       },
       {
         "name": "Five of Wands",
@@ -219,7 +219,7 @@ const tarot_data = [
         "suit": "Wands",
         "astrologicalCorrespondence": "Leo",
         "reversal": false,
-        "imageName": "wands05.jpg"
+        "imageName": "Wands05.jpg"
       },
       {
         "name": "Six of Wands",
@@ -228,7 +228,7 @@ const tarot_data = [
         "suit": "Wands",
         "astrologicalCorrespondence": "Leo",
         "reversal": false,
-        "imageName": "wands06.jpg"
+        "imageName": "Wands06.jpg"
       },
       {
         "name": "Seven of Wands",
@@ -237,7 +237,7 @@ const tarot_data = [
         "suit": "Wands",
         "astrologicalCorrespondence": "Leo",
         "reversal": false,
-        "imageName": "wands07.jpg"
+        "imageName": "Wands07.jpg"
       },
       {
         "name": "Eight of Wands",
@@ -246,7 +246,7 @@ const tarot_data = [
         "suit": "Wands",
         "astrologicalCorrespondence": "Sagittarius",
         "reversal": false,
-        "imageName": "wands08.jpg"
+        "imageName": "Wands08.jpg"
       },
       {
         "name": "Nine of Wands",
@@ -255,7 +255,7 @@ const tarot_data = [
         "suit": "Wands",
         "astrologicalCorrespondence": "Sagittarius",
         "reversal": false,
-        "imageName": "wands09.jpg"
+        "imageName": "Wands09.jpg"
       },
       {
         "name": "Ten of Wands",
@@ -264,7 +264,7 @@ const tarot_data = [
         "suit": "Wands",
         "astrologicalCorrespondence": "Sagittarius",
         "reversal": false,
-        "imageName": "wands10.jpg"
+        "imageName": "Wands10.jpg"
        },
         {
          "name": "Page of Wands",
@@ -273,7 +273,7 @@ const tarot_data = [
          "suit": "Wands",
          "astrologicalCorrespondence": "Aries",
          "reversal": false,
-         "imageName": "wands11.jpg"
+         "imageName": "Wands11.jpg"
         },
         {
          "name": "Knight of Wands",
@@ -282,7 +282,7 @@ const tarot_data = [
          "suit": "Wands",
          "astrologicalCorrespondence": "Aries",
          "reversal": false,
-         "imageName": "wands12.jpg"
+         "imageName": "Wands12.jpg"
         },
         {
          "name": "Queen of Wands",
@@ -291,7 +291,7 @@ const tarot_data = [
          "suit": "Wands",
          "astrologicalCorrespondence": "Aries",
          "reversal": false,
-         "imageName": "wands13.jpg"
+         "imageName": "Wands13.jpg"
         },
         {
          "name": "King of Wands",
@@ -300,7 +300,7 @@ const tarot_data = [
          "suit": "Wands",
          "astrologicalCorrespondence": "Aries",
          "reversal": false,
-         "imageName": "wands14.jpg"
+         "imageName": "Wands14.jpg"
         },
 
     {

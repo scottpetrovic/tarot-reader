@@ -45,11 +45,7 @@ export class TarotReading
         // Initialize UI with the initial state when HTML elements are loaded
         document.addEventListener('DOMContentLoaded', () => {
             this.setup_click_events()
-            this.transitionState(this.currentState);
-
-            // slow down tarot card animation video man
-            document.getElementById('tarot-reader-person').playbackRate  = 0.2;
-            document.getElementById('tarot-reader-person').play();
+            this.transitionState(this.currentState);  
         });  
 
        
@@ -241,7 +237,7 @@ export class TarotReading
 
         // update image of card selected on the DOM
         const selected_card_dom_image =  document.getElementById('currently-selected-card-image')
-        selected_card_dom_image.src = `./images/${selected_card.arcanaType}/${selected_card.imageName}`;
+        selected_card_dom_image.src = `./images/${selected_card.arcanaType.toLowerCase()}/${selected_card.imageName}`;
         selected_card_dom_image.alt = selected_card.name
 
         
