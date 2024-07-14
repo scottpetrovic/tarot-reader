@@ -7,10 +7,10 @@ export class TarotReading
 {
     constructor() {
 
-        this.is_production = false;
+        this.is_production = true;
 
         if(this.is_production) {
-            this.ollama = new Ollama({ host: '//tarot.louvus.com/ollama/' })
+            this.ollama = new Ollama({ host: '//ollama.louvus.com/' })
         }
         else {
             this.ollama = new Ollama({ host: '//127.0.0.1:11435' })
