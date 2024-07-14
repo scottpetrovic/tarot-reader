@@ -1,11 +1,21 @@
 import tarot_data from './tarot_data.js';
-import ollama from 'ollama/browser'; // the normal ollama doesn't work with 'npm run build'
+import { Ollama } from 'ollama/browser'
 
 import { phrases_for_thinking, fortune_cookie_phrases } from './closing_remarks.js';
 
 export class TarotReading
 {
     constructor() {
+
+        this.is_production = false;
+
+        if(this.is_production) {
+            this.ollama = new Ollama({ host: '//tarot.louvus.com/ollama/' })
+        }
+        else {
+            this.ollama = new Ollama({ host: '//127.0.0.1:11435' })
+        }
+       
 
         this.states = {
             INTRODUCTION: 'step-introduction',
@@ -266,7 +276,7 @@ export class TarotReading
         ];
 
         // get advice from AI
-        const response = await ollama.chat({ model: 'llama3', messages: message_data, stream: true })
+        const response = await this.ollama.chat({ model: 'llama3', messages: message_data, stream: true })
         const reading_card_dom_element = document.getElementById('reading-card-results');
         for await (const part of response) {
             reading_card_dom_element.innerText += part.message.content;
@@ -318,7 +328,7 @@ export class TarotReading
             }
         ];
 
-        const response = await ollama.chat({ model: 'llama3', messages: summarize_messsage_data, stream: true })
+        const response = await this.ollama.chat({ model: 'llama3', messages: summarize_messsage_data, stream: true })
         const summary_of_reading_dom_element = document.getElementById('summary-of-full-reading');
         for await (const part of response) {
             summary_of_reading_dom_element.innerText += part.message.content;
