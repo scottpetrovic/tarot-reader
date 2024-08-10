@@ -84,7 +84,7 @@ p {
 
 .reversed {
     transform: rotate(180deg);
-    transition-duration: 0s;
+    transition-duration: 1.0s;
     transition-property: transform;
 }
 
@@ -136,7 +136,6 @@ p {
 .current-question-asked {
     margin: auto auto;
     font-size: 30px;
-    text-align: center;
     margin-bottom: 2rem;
 }
 
